@@ -1,7 +1,14 @@
 from flask import render_template, Flask, request
+import urllib2, json, pprint
+import url_builder
+
 app = Flask(__name__)
 
-data = {}
+#Variables - globals
+json_response = ""
+
+#URL Form : https://api.remix.bestbuy.com/v1/products(search=phones)?apiKey=bkrmw5nuvtje73guc2v8mt8q&format=json
+baseUrl = "https://api.remix.bestbuy.com/v1/products"
 
 @app.route('/')
 def index():
@@ -10,35 +17,65 @@ def index():
 
 @app.route('/results/', methods=['POST'])
 def show_results():
+    url_builder.data['searchString'] = ""
     if request.method == 'POST':
-
+        
         categoryButton = request.form['category']
 
         if categoryButton == 'phone':
             print "Phone category button clicked \n"
-            data['category'] = 'phone'
+            url_builder.data['searchString'] += 'phone%20'
             
             choiceButton = request.form['display']
              
             if choiceButton == 'latest':
                 print "Phone latest choiceButton clicked \n"
-                data['choice'] = 'latest'
+                #url_builder.data['searchString'] += 'retina%20display%20'
 
             elif choiceButton == 'newish':
                 print "Phone newishButton clicked \n"
-                data['choice'] = 'new-ish'
+                #url_builder.data['searchString'] += 'AMOLED%20display%20'
             
             elif choiceButton == 'old':
                 print "Phone old choiceButton clicked \n"
-                data['choice'] = 'old'
+                #url_builder.data['searchString'] += 'normal%20display%20'
             pass
         pass
     pass
     
-    return render_template('results.html', data=data)
-    pass
+    return next_page()
+
+@app.route('/next/')
+def next_page():
+    myUrl = baseUrl
+    myUrl = url_builder.add_search_string(myUrl)
+    myUrl = url_builder.add_empty_query_string(myUrl)
+    myUrl = url_builder.add_api_key_to_query_string(myUrl)
+    myUrl = url_builder.add_format_to_query_string(myUrl)
+    myUrl = url_builder.add_next_page_number(myUrl)
+    print "MY URL" + myUrl + "\n" 
+    response = urllib2.urlopen(myUrl)
+    json_response = json.load(response)
+    return render_template('results.html', json_response = json_response )
+
+@app.route('/previous/')
+def previous_page():
+    myUrl = baseUrl
+    myUrl = url_builder.add_search_string(myUrl)
+    myUrl = url_builder.add_empty_query_string(myUrl)
+    myUrl = url_builder.add_api_key_to_query_string(myUrl)
+    myUrl = url_builder.add_format_to_query_string(myUrl)
+    myUrl = url_builder.add_previous_page_number(myUrl)
+    print "MY URL" + myUrl + "\n" 
+    response = urllib2.urlopen(myUrl)
+    json_response = json.load(response)
+    return render_template('results.html', json_response = json_response)
 
 if __name__ == '__main__':
-   app.run(debug=True)
-   pass
+    url_builder.data['searchString'] = url_builder.searchString
+    url_builder.data['bestBuyKey'] = url_builder.bestBuyKey
+    url_builder.data['formatString'] = url_builder.formatString
+    url_builder.data['page'] = 0
+    app.run(debug=True)
+    pass
 
