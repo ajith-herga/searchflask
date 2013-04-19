@@ -1,0 +1,8 @@
+<!doctype html>
+{% block body %}
+    <ul>
+    {% for k, v in  data.iteritems() %}
+    <li> {{ k }}:{{ v }}</li>
+    {% endfor %}
+    </ul>
+{% endblock %}
