@@ -28,7 +28,7 @@ def add_next_page_number(baseUrl):
     return baseUrl
 
 def add_previous_page_number(baseUrl):
-    if data['page'] > 0 :
+    if data['page'] > 1 :
         data['page'] = data['page'] - 1;
         baseUrl = baseUrl + "&page=" + str(data['page'])
 
