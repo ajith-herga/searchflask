@@ -1,0 +1,17 @@
+<!doctype html>
+<title> Keyword based search </title>
+<div> 
+    <form action="{{ url_for('show_results') }}" method=post>
+        <div>
+            <h1> Pick a category </h1>
+            <input type="radio" name="category" value="phone">Phone<br>
+        </div>
+        <div>
+            <h2> Display </h2>
+            <input type="radio" name="display" value="latest">Latest<br>
+            <input type="radio" name="display" value="newish">New-ish<br>
+            <input type="radio" name="display" value="old">Old<br>
+        </div>
+        <input type="submit" value="Search">
+    </form>
+</div>

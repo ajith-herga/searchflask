@@ -1,0 +1,10 @@
+<!doctype html>
+{% block body %}
+<div>
+    <a href="{{ url_for('next_page') }}">next results</a>
+    <a href="{{ url_for('previous_page') }}">previous results</a>
+</div>
+<div>
+    {{ json_response }}
+</div>
+{% endblock %}
