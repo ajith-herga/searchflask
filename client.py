@@ -21,28 +21,12 @@ def show_results():
     if request.method == 'POST':
         
         categoryButton = request.form['category']
-
         if categoryButton == 'phone':
-            print "Phone category button clicked \n"
-            url_builder.data['searchString'] += 'phone%20'
-            
-            choiceButton = request.form['display']
-             
-            if choiceButton == 'latest':
-                print "Phone latest choiceButton clicked \n"
-                #url_builder.data['searchString'] += 'retina%20display%20'
+            checkedAttributes = request.form.getlist("Attribute")
+            #Call Abhishek's function
 
-            elif choiceButton == 'newish':
-                print "Phone newishButton clicked \n"
-                #url_builder.data['searchString'] += 'AMOLED%20display%20'
-            
-            elif choiceButton == 'old':
-                print "Phone old choiceButton clicked \n"
-                #url_builder.data['searchString'] += 'normal%20display%20'
-            pass
-        pass
-    pass
-    
+        print "Checked Attributes ", checkedAttributes, "\n"
+        
     return next_page()
 
 @app.route('/next/')
