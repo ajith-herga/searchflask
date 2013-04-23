@@ -1,7 +1,7 @@
 from flask import render_template, Flask, request
 import urllib2, json, pprint
 import url_builder
-
+import product_search
 app = Flask(__name__)
 
 #Variables - globals
@@ -23,7 +23,7 @@ def show_results():
         categoryButton = request.form['category']
         if categoryButton == 'phone':
             checkedAttributes = request.form.getlist("Attribute")
-            #Call Abhishek's function
+            
 
         print "Checked Attributes ", checkedAttributes, "\n"
         
