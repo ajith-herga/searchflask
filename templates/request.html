@@ -4,39 +4,8 @@
     <form action="{{ url_for('show_results') }}" method=post>
         <div>
            <h2> Pick a category </h2>
-            <input type="radio" name="category" checked="checked" value="phone"><b>Phone</b><br><br>
+            <input type="text" name="text" value=""><b>Search</b><br><br>
         </div>
-            <h3> What attributes would you want </h3>
-        <div>
-            <input type="checkbox" name="Attribute" checked="checked" value="display"> <b> Display </b> <br>
-            <!-- input type="radio" name="display" checked="checked" value="latest"> Latest
-            <input type="radio" name="display" value="newish"> New-ish
-            <input type="radio" name="display" value="old"> Old <br><br-->
-
-            <input type="checkbox" name="Attribute" checked="checked" checked="checked" value="data_connectivity"> <b> Data Connectivity </b> <br>
-            <!-- input type="radio" name="data_connectivity" checked="checked" value="latest"> Latest
-            <input type="radio" name="data_connectivity" value="newish"> New-ish
-            <input type="radio" name="data_connectivity" value="old"> Old <br><br-->
-            
-            <input type="checkbox" name="Attribute" checked="checked" value="wireless_connectivity"> <b> Wireless Connectivity </b> <br>
-            <!-- input type="radio" name="wireless_connectivity" checked="checked" value="latest">Latest
-            <input type="radio" name="wireless_connectivity" value="newish">New-ish
-            <input type="radio" name="wireless_connectivity" value="old"> Old <br><br-->
-        
-            <input type="checkbox" name="Attribute" checked="checked" value="pairing_connectivity"> <b> Pairing Connectivity </b> <br>
-            <!-- input type="radio" name="pairing_connectivity" checked="checked" value="latest">Latest
-            <input type="radio" name="pairing_connectivity" value="newish">New-ish
-            <input type="radio" name="pairing_connectivity" value="old"> Old <br><br-->
-            
-            <input type="checkbox" name="Attribute" checked="checked" value="audio"> <b> Audio </b> <br>
-            <!-- input type="radio" name="audio" checked="checked" value="latest"> Latest 
-            <input type="radio" name="audio" value="newish"> New-ish
-            <input type="radio" name="audio" value="old"> Old <br><br -->
-            
-            <input type="checkbox" name="Attribute" checked="checked" value="camera_technology"> <b> Camera Technology </b> <br>
-            <!-- input type="radio" name="camera_technology" checked="checked" value="latest"> Latest  
-            <input type="radio" name="camera_technology" value="newish"> New-ish
-            <input type="radio" name="camera_technology" value="old"> Old <br><br -->
             <input type="submit" value="Search">
         </div>
     </form>

@@ -1,10 +1,5 @@
 import urllib2, json, pprint
 
-#Variables - globals
-
-searchString = ""
-bestBuyKey = "bkrmw5nuvtje73guc2v8mt8q"
-formatString = "json"
 data = {}
 
 
@@ -33,3 +28,4 @@ def add_previous_page_number(baseUrl):
         baseUrl = baseUrl + "&page=" + str(data['page'])
 
     return baseUrl
+
