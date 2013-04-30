@@ -1,0 +1,12 @@
+<!doctype html>
+<title> Keyword based search </title>
+<div> 
+    <form action="{{ url_for('show_results') }}" method=post>
+        <div>
+           <h2> Pick a category </h2>
+            <input type="text" name="text" value=""><b>Search</b><br><br>
+        </div>
+            <input type="submit" value="Search">
+        </div>
+    </form>
+</div>

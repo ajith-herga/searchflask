@@ -1,0 +1,1465 @@
+(lp0
+(Vdisplay
+p1
+V0.976508
+p2
+V0.0435756
+p3
+tp4
+a(VSamsung Galaxy
+p5
+V0.841484
+p6
+V0.294937
+p7
+tp8
+a(VRetina display
+p9
+V0.434678
+p10
+V0.0183373
+p11
+tp12
+a(Vphone
+p13
+V0.378214
+p14
+V0.0351751
+p15
+tp16
+a(VSuper AMOLED HD
+p17
+V0.365634
+p18
+V0.116175
+p19
+tp20
+a(VSuper AMOLED Plus
+p21
+V0.359608
+p22
+V0.0713671
+p23
+tp24
+a(VMobile BRAVIA Engine
+p25
+V0.337071
+p26
+V0.0917439
+p27
+tp28
+a(VSony Ericsson
+p29
+V0.32784
+p30
+V0.0422792
+p31
+tp32
+a(VGraphics Array
+p33
+V0.318535
+p34
+V0.0699743
+p35
+tp36
+a(Vtechnology
+p37
+V0.273011
+p38
+V0.00462613
+p39
+tp40
+a(VSamsung Galaxy S2
+p41
+V0.251065
+p42
+V0.121255
+p43
+tp44
+a(Vphone screen
+p45
+V0.250049
+p46
+V0.234743
+p47
+tp48
+a(VSamsung Galaxy S3
+p49
+V0.248028
+p50
+V0.628992
+p51
+tp52
+a(VSamsung Galaxy Note
+p53
+V0.243633
+p54
+V0.134563
+p55
+tp56
+a(VHTC
+p57
+V0.237341
+p58
+V0.277631
+p59
+tp60
+a(Vmobile phone screen
+p61
+V0.235131
+p62
+V0.19013
+p63
+tp64
+a(Vphones
+p65
+V0.233473
+p66
+V0.0311945
+p67
+tp68
+a(VVideo Graphics Array
+p69
+V0.219168
+p70
+V0.0612582
+p71
+tp72
+a(Vsingle white/grey frame
+p73
+V0.657252
+p74
+V0.000128918
+p75
+tp76
+a(Vactual intensity
+p77
+V0.626032
+p78
+V0.00431053
+p79
+tp80
+a(Vchromatic multiplexing
+p81
+V0.55351
+p82
+V0.000176281
+p83
+tp84
+a(Vpulse-width modulation
+p85
+V0.542829
+p86
+V0.00274537
+p87
+tp88
+a(VSingle-chip DLPs
+p89
+V0.540739
+p90
+V0.00134745
+p91
+tp92
+a(Villuminated period
+p93
+V0.539239
+p94
+V0.11488
+p95
+tp96
+a(Vdifferent technologies
+p97
+V0.538563
+p98
+V0.000216523
+p99
+tp100
+a(Vinput signal
+p101
+V0.527705
+p102
+V0.00475683
+p103
+tp104
+a(Vflicker frequency
+p105
+V0.525307
+p106
+V0.0778021
+p107
+tp108
+a(Vmechanical shutter
+p109
+V0.523713
+p110
+V0.036869
+p111
+tp112
+a(Velectron beam
+p113
+V0.520767
+p114
+V0.00169748
+p115
+tp116
+a(VMovie theaters
+p117
+V0.518627
+p118
+V0.00605624
+p119
+tp120
+a(Vhuman eye
+p121
+V0.512616
+p122
+V0.046411
+p123
+tp124
+a(Vkind
+p125
+V0.485335
+p126
+V0.00146188
+p127
+tp128
+a(VCRTs
+p129
+V0.434941
+p130
+V0.000185877
+p131
+tp132
+a(Vfigure
+p133
+V0.422583
+p134
+V0.000216523
+p135
+tp136
+a(Vresponse
+p137
+V0.420936
+p138
+V0.00464196
+p139
+tp140
+a(Vscreens
+p141
+V0.969668
+p142
+V0.042957
+p143
+tp144
+a(Vlcd screens
+p145
+V0.590608
+p146
+V0.228454
+p147
+tp148
+a(VAMOLED screens
+p149
+V0.390417
+p150
+V0.278512
+p151
+tp152
+a(VTFT
+p153
+V0.363101
+p154
+V0.17183
+p155
+tp156
+a(Vsub pixel layout
+p157
+V0.36238
+p158
+V0.0148375
+p159
+tp160
+a(Vsub pixels
+p161
+V0.359585
+p162
+V0.12237
+p163
+tp164
+a(Vstandard LCD screens
+p165
+V0.353524
+p166
+V0.0884311
+p167
+tp168
+a(VIPS
+p169
+V0.341977
+p170
+V0.180102
+p171
+tp172
+a(Vhigh end screens
+p173
+V0.340333
+p174
+V0.139982
+p175
+tp176
+a(VSamsung
+p177
+V0.338794
+p178
+V0.184274
+p179
+tp180
+a(VIPS screens
+p181
+V0.335259
+p182
+V0.0128679
+p183
+tp184
+a(VSamsung Galaxy
+p185
+V0.334846
+p186
+V0.211691
+p187
+tp188
+a(Vtechnology
+p189
+V0.334593
+p190
+V0.224196
+p191
+tp192
+a(Vpopular LCD technology
+p193
+V0.333466
+p194
+V0.143057
+p195
+tp196
+a(Vdevices
+p197
+V0.332875
+p198
+V0.304577
+p199
+tp200
+a(Vcontrast ratio
+p201
+V0.332806
+p202
+V0.0514703
+p203
+tp204
+a(Vliquid crystals
+p205
+V0.332224
+p206
+V0.20858
+p207
+tp208
+a(VNotable Devices
+p209
+V0.330971
+p210
+V0.506509
+p211
+tp212
+a(Vcolor reproduction
+p213
+V0.330533
+p214
+V0.0434642
+p215
+tp216
+a(Vnormal screens
+p217
+V0.329477
+p218
+V0.384207
+p219
+tp220
+a(Vvivid AMOLED screen
+p221
+V0.326802
+p222
+V0.18368
+p223
+tp224
+a(Vpentile sub pixel
+p225
+V0.324824
+p226
+V0.0316642
+p227
+tp228
+a(VSuper AMOLED Plus
+p229
+V0.32316
+p230
+V0.154145
+p231
+tp232
+a(VSamsung Galaxy Tab
+p233
+V0.322641
+p234
+V0.105902
+p235
+tp236
+a(Vnewest screen technology
+p237
+V0.322277
+p238
+V0.228768
+p239
+tp240
+a(Vwondrous liquid crystals
+p241
+V0.320536
+p242
+V0.414296
+p243
+tp244
+a(VLight Emitting Diode
+p245
+V0.320495
+p246
+V0.153168
+p247
+tp248
+a(Vwider viewing angles
+p249
+V0.31991
+p250
+V0.0769471
+p251
+tp252
+a(VWiMax Internet Service
+p253
+V0.319061
+p254
+V0.133907
+p255
+tp256
+a(VNanosys QDEF impressions
+p257
+V0.318821
+p258
+V0.173624
+p259
+tp260
+a(VAMOLED phones
+p261
+V0.318634
+p262
+V0.105053
+p263
+tp264
+a(VTFT displays
+p265
+V0.317245
+p266
+V0.112939
+p267
+tp268
+a(Vstandard TFT
+p269
+V0.317127
+p270
+V0.499552
+p271
+tp272
+a(Vmodern day devices
+p273
+V0.31325
+p274
+V0.263172
+p275
+tp276
+a(Vscreen technologies
+p277
+V0.312991
+p278
+V0.284031
+p279
+tp280
+a(VSuper AMOLED Plus
+p281
+V0.389947
+p282
+V0.0747947
+p283
+tp284
+a(Vtechnology
+p285
+V0.3699
+p286
+V0.0675696
+p287
+tp288
+a(VSuper AMOLED displays
+p289
+V0.362276
+p290
+V0.0190691
+p291
+tp292
+a(VHD Super AMOLED
+p293
+V0.356818
+p294
+V0.00187444
+p295
+tp296
+a(Vdisplay technology
+p297
+V0.35305
+p298
+V0.0792012
+p299
+tp300
+a(Vedit
+p301
+V0.339901
+p302
+V0.137818
+p303
+tp304
+a(VSuper AMOLED Advanced
+p305
+V0.33849
+p306
+V0.158148
+p307
+tp308
+a(Vedit Super AMOLED
+p309
+V0.32607
+p310
+V0.167916
+p311
+tp312
+a(VGalaxy Nexus
+p313
+V0.324158
+p314
+V0.00347157
+p315
+tp316
+a(Vactive matrix
+p317
+V0.320867
+p318
+V0.0189877
+p319
+tp320
+a(Vpentile matrix family
+p321
+V0.320291
+p322
+V0.00283219
+p323
+tp324
+a(Vpredecessor Samsung Galaxy
+p325
+V0.317428
+p326
+V0.0360533
+p327
+tp328
+a(VIPS panel premium
+p329
+V0.31591
+p330
+V0.000753327
+p331
+tp332
+a(VSuper AMOLED technology
+p333
+V0.315686
+p334
+V0.186413
+p335
+tp336
+a(VSamsung Mobile Display
+p337
+V0.315393
+p338
+V0.193743
+p339
+tp340
+a(VAMOLED screens
+p341
+V0.315354
+p342
+V0.117579
+p343
+tp344
+a(VSuper AMOLED screens
+p345
+V0.313445
+p346
+V0.140556
+p347
+tp348
+a(Vsolution-coated AMOLED display
+p349
+V0.313273
+p350
+V0.0448211
+p351
+tp352
+a(Vtransparent Super AMOLED
+p353
+V0.312981
+p354
+V0.0900678
+p355
+tp356
+a(VLCD displays
+p357
+V0.311745
+p358
+V0.0536821
+p359
+tp360
+a(Vflexible AMOLED displays.
+p361
+V0.311007
+p362
+V0.0904535
+p363
+tp364
+a(VSAMSUNG UK
+p365
+V0.311003
+p366
+V0.00278256
+p367
+tp368
+a(VTFT backplane
+p369
+V0.310705
+p370
+V0.287688
+p371
+tp372
+a(Vhigher resolution
+p373
+V0.309457
+p374
+V0.141454
+p375
+tp376
+a(Vmatrix OLED operation.
+p377
+V0.309069
+p378
+V0.113087
+p379
+tp380
+a(Vhigher resolution display
+p381
+V0.308249
+p382
+V0.148495
+p383
+tp384
+a(Vnext-generation LCD displays
+p385
+V0.308242
+p386
+V0.0536821
+p387
+tp388
+a(VMIT Technology Review
+p389
+V0.933783
+p390
+V4.34859e-05
+p391
+tp392
+a(Vnew countries
+p393
+V0.665769
+p394
+V0.179956
+p395
+tp396
+a(Vlocal market
+p397
+V0.610937
+p398
+V4.79881e-05
+p399
+tp400
+a(Vglobe
+p401
+V0.419059
+p402
+V0.144133
+p403
+tp404
+a(Vmarkets
+p405
+V0.261846
+p406
+V0.163072
+p407
+tp408
+a(VInterested
+p409
+V0.257002
+p410
+V1.97334e-05
+p411
+tp412
+a(Vdisplay
+p413
+V0.654938
+p414
+V0.00380991
+p415
+tp416
+a(Vcell phone screens
+p417
+V0.531065
+p418
+V0.135053
+p419
+tp420
+a(VLCDs
+p421
+V0.457112
+p422
+V0.234122
+p423
+tp424
+a(Vtouch
+p425
+V0.445458
+p426
+V0.00246327
+p427
+tp428
+a(Vtouch screen
+p429
+V0.425452
+p430
+V0.00195607
+p431
+tp432
+a(Vinput device
+p433
+V0.414608
+p434
+V0.00322218
+p435
+tp436
+a(VOrganic Light-Emitting Diode
+p437
+V0.388492
+p438
+V0.0792767
+p439
+tp440
+a(Vbrighter images
+p441
+V0.347278
+p442
+V0.244275
+p443
+tp444
+a(Vvisual display
+p445
+V0.341957
+p446
+V0.00380991
+p447
+tp448
+a(Vstylus
+p449
+V0.309191
+p450
+V0.00380991
+p451
+tp452
+a(Vfingers
+p453
+V0.309131
+p454
+V0.00343852
+p455
+tp456
+a(Vtruth
+p457
+V0.308423
+p458
+V0.101284
+p459
+tp460
+a(Vpower
+p461
+V0.308048
+p462
+V0.116219
+p463
+tp464
+a(VSamsung
+p465
+V0.988279
+p466
+V0.0844731
+p467
+tp468
+a(Vflexible-display technology
+p469
+V0.532474
+p470
+V0.0313437
+p471
+tp472
+a(Vform factors
+p473
+V0.524565
+p474
+V0.1192
+p475
+tp476
+a(VYoum flexible-display technology
+p477
+V0.52366
+p478
+V0.0313437
+p479
+tp480
+a(Vtraditional LCD displays
+p481
+V0.370879
+p482
+V0.16669
+p483
+tp484
+a(Voverall contrast ratio
+p485
+V0.370575
+p486
+V0.163145
+p487
+tp488
+a(Vpossible form factors
+p489
+V0.370266
+p490
+V0.232307
+p491
+tp492
+a(Vbetter power efficiency
+p493
+V0.36994
+p494
+V0.213238
+p495
+tp496
+a(Vlarger form factors
+p497
+V0.364524
+p498
+V0.164069
+p499
+tp500
+a(Vhigher pixel displays
+p501
+V0.363413
+p502
+V0.121284
+p503
+tp504
+a(Vclosing keynote
+p505
+V0.342782
+p506
+V0.0583799
+p507
+tp508
+a(Vtext messages
+p509
+V0.339763
+p510
+V0.121365
+p511
+tp512
+a(Ventire screen
+p513
+V0.339711
+p514
+V0.295139
+p515
+tp516
+a(Vdemo units
+p517
+V0.339388
+p518
+V0.0101506
+p519
+tp520
+a(Vscreen bent
+p521
+V0.339169
+p522
+V0.138316
+p523
+tp524
+a(Vphonelike device
+p525
+V0.338689
+p526
+V0.018359
+p527
+tp528
+a(Vkinetic interface
+p529
+V0.336758
+p530
+V0.233311
+p531
+tp532
+a(Vflexible screen
+p533
+V0.336585
+p534
+V0.1321
+p535
+tp536
+a(Vquestion mark
+p537
+V0.336329
+p538
+V0.0764738
+p539
+tp540
+a(Vtransparent displays
+p541
+V0.335355
+p542
+V0.0979184
+p543
+tp544
+a(Vadditional areas
+p545
+V0.334891
+p546
+V0.163655
+p547
+tp548
+a(Vnewer models
+p549
+V0.334794
+p550
+V0.154444
+p551
+tp552
+a(Vfuture devices
+p553
+V0.334036
+p554
+V0.020084
+p555
+tp556
+a(Vsmartphones
+p557
+V0.332895
+p558
+V0.000579471
+p559
+tp560
+a(Vtablets
+p561
+V0.329053
+p562
+V0.000380833
+p563
+tp564
+a(Vedges
+p565
+V0.327408
+p566
+V0.00561217
+p567
+tp568
+a(Vconcept
+p569
+V0.319816
+p570
+V0.00189562
+p571
+tp572
+a(Vinformation
+p573
+V0.319218
+p574
+V0.0868957
+p575
+tp576
+a(Vhandful
+p577
+V0.308041
+p578
+V0.00561217
+p579
+tp580
+a(VCPUs
+p581
+V0.307159
+p582
+V0.205327
+p583
+tp584
+a(V3D display
+p585
+V0.965498
+p586
+V0.0175113
+p587
+tp588
+a(VFattal
+p589
+V0.938541
+p590
+V0.0439259
+p591
+tp592
+a(Vdifferent images
+p593
+V0.792939
+p594
+V0.0906662
+p595
+tp596
+a(Vdifferent directions
+p597
+V0.562083
+p598
+V0.122351
+p599
+tp600
+a(VLCD screen
+p601
+V0.533988
+p602
+V0.0267738
+p603
+tp604
+a(Vslab
+p605
+V0.492552
+p606
+V0.0171313
+p607
+tp608
+a(Vslightly different images
+p609
+V0.458481
+p610
+V0.122351
+p611
+tp612
+a(Vcorresponding light beams
+p613
+V0.458288
+p614
+V0.0158538
+p615
+tp616
+a(Vdifferent vantage points
+p617
+V0.448615
+p618
+V0.0335017
+p619
+tp620
+a(Vgreat technology demonstrator
+p621
+V0.42395
+p622
+V0.324994
+p623
+tp624
+a(Vlarger pixel sizes
+p625
+V0.414436
+p626
+V0.160147
+p627
+tp628
+a(Vgrooves
+p629
+V0.383466
+p630
+V0.024883
+p631
+tp632
+a(Vdiffraction gratings
+p633
+V0.371948
+p634
+V0.00374431
+p635
+tp636
+a(Vglass slab
+p637
+V0.368413
+p638
+V0.00374431
+p639
+tp640
+a(Vmobile technology
+p641
+V0.354412
+p642
+V0.0894419
+p643
+tp644
+a(Vlinear grooves
+p645
+V0.352481
+p646
+V0.00222937
+p647
+tp648
+a(Vmobile phone
+p649
+V0.350503
+p650
+V0.0894419
+p651
+tp652
+a(Vgold standard
+p653
+V0.348623
+p654
+V0.0172123
+p655
+tp656
+a(Vlight ray
+p657
+V0.344624
+p658
+V0.000161
+p659
+tp660
+a(Vwrist watch
+p661
+V0.343791
+p662
+V0.0810504
+p663
+tp664
+a(Vpatterns
+p665
+V0.342924
+p666
+V0.0571897
+p667
+tp668
+a(VStar Wars
+p669
+V0.339006
+p670
+V0.023832
+p671
+tp672
+a(Vviewing angle
+p673
+V0.337876
+p674
+V0.00689132
+p675
+tp676
+a(VPrincess Leia
+p677
+V0.337812
+p678
+V0.0320509
+p679
+tp680
+a(VGeorge Lucas
+p681
+V0.335565
+p682
+V0.0145443
+p683
+tp684
+a(Vethereal video
+p685
+V0.335071
+p686
+V0.0353693
+p687
+tp688
+a(Vparticular direction
+p689
+V0.333307
+p690
+V7.1278e-05
+p691
+tp692
+a(Veye-popping views
+p693
+V0.332762
+p694
+V0.116747
+p695
+tp696
+a(Vdisplays
+p697
+V0.8316
+p698
+V0.0604623
+p699
+tp700
+a(Vscreen
+p701
+V0.785745
+p702
+V0.0567173
+p703
+tp704
+a(Vresolution
+p705
+V0.591592
+p706
+V0.0500685
+p707
+tp708
+a(Vdirect sunlight
+p709
+V0.437404
+p710
+V0.0716141
+p711
+tp712
+a(VSuper AMOLED Plus
+p713
+V0.416357
+p714
+V0.0844788
+p715
+tp716
+a(Vscreens
+p717
+V0.409583
+p718
+V0.033846
+p719
+tp720
+a(Vmobile displays
+p721
+V0.40403
+p722
+V0.056382
+p723
+tp724
+a(Vpixels
+p725
+V0.389623
+p726
+V0.0164341
+p727
+tp728
+a(VRetina Display
+p729
+V0.380808
+p730
+V0.0541227
+p731
+tp732
+a(Vscreen resolution
+p733
+V0.368106
+p734
+V0.0921622
+p735
+tp736
+a(Vtechnologies
+p737
+V0.361597
+p738
+V0.114276
+p739
+tp740
+a(VLCD
+p741
+V0.360408
+p742
+V0.032725
+p743
+tp744
+a(Vbrightness
+p745
+V0.35396
+p746
+V0.0878605
+p747
+tp748
+a(Vsmartphones
+p749
+V0.351183
+p750
+V0.0169808
+p751
+tp752
+a(Vsquare root
+p753
+V0.349826
+p754
+V0.0955566
+p755
+tp756
+a(VLCDs
+p757
+V0.348107
+p758
+V0.0432162
+p759
+tp760
+a(Vcolors
+p761
+V0.34701
+p762
+V0.093339
+p763
+tp764
+a(Vlight source
+p765
+V0.346972
+p766
+V0.145768
+p767
+tp768
+a(Vcontrast ratios
+p769
+V0.341587
+p770
+V0.0959006
+p771
+tp772
+a(VTN
+p773
+V0.33731
+p774
+V0.0159246
+p775
+tp776
+a(VSamsung
+p777
+V0.331021
+p778
+V0.110375
+p779
+tp780
+a(Vdisplay types
+p781
+V0.330566
+p782
+V0.106827
+p783
+tp784
+a(VIPS
+p785
+V0.329891
+p786
+V0.0310945
+p787
+tp788
+a(Vphone
+p789
+V0.328385
+p790
+V0.159973
+p791
+tp792
+a(Vdisplay technology
+p793
+V0.327541
+p794
+V0.0294465
+p795
+tp796
+a(Vnematic crystals
+p797
+V0.323453
+p798
+V0.117724
+p799
+tp800
+a(VTN displays
+p801
+V0.323009
+p802
+V0.0675475
+p803
+tp804
+a(Vtime
+p805
+V0.322811
+p806
+V0.035177
+p807
+tp808
+a(VSuper LCD
+p809
+V0.322418
+p810
+V0.0516283
+p811
+tp812
+a(VLiquid Crystal Display
+p813
+V0.322068
+p814
+V0.0810504
+p815
+tp816
+a(Vtransparent displays
+p817
+V0.32135
+p818
+V0.122334
+p819
+tp820
+a(Vorganic compounds
+p821
+V0.321124
+p822
+V0.0185448
+p823
+tp824
+a(Vmobile phones
+p825
+V0.320931
+p826
+V0.101862
+p827
+tp828
+a(Vcommon LCD display
+p829
+V0.319734
+p830
+V0.0888376
+p831
+tp832
+a(Vparallax barrier
+p833
+V0.319421
+p834
+V0.146899
+p835
+tp836
+a.

@@ -1,13 +1,8 @@
-from flask import render_template, Flask, request
-import urllib2, json, pprint
-import url_builder
-import product_search
 import init_url
 app = Flask(__name__)
 
 
-test_url = product_search
-json_response = ""
+test_url = product_build
 
 
 @app.route('/')
@@ -15,18 +10,23 @@ def index():
     return render_template('request.html')
 
 
-@app.route('/results/', methods=['POST'])
-def show_results():
-    url_builder.data['searchString'] = ""
-    print request
+@app.route('/queryentered/', methods=['POST'])
+def entered_query():
     if request.method == 'POST':
         enteredQuery = request.form['text']
         if enteredQuery == "":
             return index()
         strip_ver = enteredQuery.lower().strip()
         test_url.search_text(strip_ver)
-    return next_page()
+        if (test_url.feedback_needed):
+            return feedback_page()
+        else:
+            return next_page()
 
+@app.route('/feedbackentered/', methods=['POST'])
+def gather_fdbk():
+    if request.method == 'POST':
+        return render_template("next.html")
 
 @app.route('/next/')
 def next_page():
@@ -37,8 +37,18 @@ def next_page():
 def previous_page():
     buf = test_url.content_for_prev_page()
     return render_template('results.html', content_page = buf)
+
+@app.route('/feedback/')
+def feedback_page():
+    buf = test_url.content_for_next_page()
+    return render_template('request_keyword.html', data_list = buf)
+ 
+@app.route('/')
+def previous_page():
+    buf = test_url.content_for_prev_page()
+    return render_template('results.html', content_page = buf)
 if __name__ == '__main__':
     test_url.init_data_on_call();
-    app.run(debug=True, port=5001)
+    app.run(debug=True)
     pass
 

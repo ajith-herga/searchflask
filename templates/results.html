@@ -1,10 +1,19 @@
-<!doctype html>
-{% block body %}
-<div>
-    <a href="{{ url_for('next_page') }}">next results</a>
-    <a href="{{ url_for('previous_page') }}">previous results</a>
-</div>
-<div>
-    {{ json_response }}
-</div>
+{% extends "template2.html" %}
+{% block content %}
+    <div class = "jumbo">
+        <h2>Welcome to Flask</h2>
+        </br>
+        <ul>
+            {% for caption, href in content_page%}
+                {% if href == "previous.html"%}
+                    <li><a href="{{ url_for('next_page') }}">{{ caption }}</a></li>
+                {% endif %}
+                {% if href == "next.html"%}
+                    <li><a href="{{ url_for('previous_page') }}">{{ caption }}</a></li>
+                {% endif %} 
+
+                <li><a href="{{ href }}">{{ caption }}</a></li>
+            {% endfor %}
+        </ul>
+    </div>
 {% endblock %}

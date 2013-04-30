@@ -3,7 +3,7 @@ from flask import render_template, Flask, request
 import copy
 import nltk
 
-feature_list = [["Retina", "AMOLED", "SuperLCD"], ["4G","LTE","HSDPA", "3G"], ["802.11N"], ["NFC"], ["Carl%20Zeiss", "Auto%20focus"]]
+feature_dict = {"display" : ["Retina", "AMOLED", "SuperLCD"], "data": ["4G","LTE","HSDPA", "3G"], "wireless" : ["802.11N"], "pairing" : ["NFC"], "camera" : ["Carl%20Zeiss", "Auto%20focus"]}
 #queryStringOrig = "https://www.googleapis.com/shopping/search/v1/public/products?key=AIzaSyD-GRHebffj4YspNUw6Bqfnc1pK8O8xWuc&country=US&q=phone"
 baseUrl = "http://api.remix.bestbuy.com/v1/products%28search=phone"
 queryStringEnd = "%29?show=all&apiKey=kbakn9s69mz3ddgf5yyn5ffc&format=json"

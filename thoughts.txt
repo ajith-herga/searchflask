@@ -1,0 +1,7 @@
+The form is stored in template folder,
+request.method is not a dictionary, just holds the string that was
+passed as a method.
+request.form is a dictionary. Ths holds key/value pairs for category names/category values.
+holds the choice of the dial made..key/value
+Added query to the data
+Getting text.. do pos tagging.
