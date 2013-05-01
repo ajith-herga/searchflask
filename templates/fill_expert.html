@@ -1,0 +1,25 @@
+<!doctype html>
+<title> {{ header }} </title>
+<div> 
+    <form action="{{ url_for({{function_call}}) }}" method=post>
+        <div>
+            <div id = "Well" style="width=500px">
+              <h2>Please Pick the relevant keywords </h2>
+              <input type="submit" value="Done">
+            </div>
+            {% set i = 0 %}
+            {% set j = 0 %}
+            {% for data in data_list%}
+                <div id = "Well" style="width:300px;float:left;">
+                <input type="checkbox" name={{j}} value="{{data}}">
+                    <b>{{data}}</b></div>
+                    {% set j = j + 1 %}
+                    {% set i = i + 1 %}
+                    {% if i == 4 %}
+                    <br>
+                    {% set i = 0 %}
+                    {% endif %}
+            {% endfor %}
+        </div>
+    </form>
+</div>
