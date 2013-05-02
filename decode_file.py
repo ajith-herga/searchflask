@@ -1,5 +1,6 @@
 import urllib2, json, pprint
 from flask import render_template, Flask, request
+from operator import itemgetter
 import copy
 import nltk
 import pickle
@@ -13,15 +14,22 @@ search_list = []
 rank_list = []
 
 
-def keyword_extract():
-    for get in getter:
+def keyword_extract(search_links_list):
+    for get in search_links_list:
         query_alch_final = baseUrlKey + "&url=" + get.strip() + queryStringEnd
         a = urllib2.urlopen(query_alch_final)
         b = json.load(a)
         for senti in b["keywords"]:
             if senti["sentiment"]["type"] == "positive":
                 rank_list.append((senti["text"], senti["relevance"], senti["sentiment"]["score"]))
-    pickle.dump(rank_list, outfile)
+    #pickle.dump(rank_list, outfile)
+
+    buf = []
+    rank_list.sort(key=itemgetter(1), reverse=1)
+    for key in rank_list:
+        buf.append(key[0])
+    
+    return buf
 
 def entity_extract():
     for get in getter:
@@ -37,7 +45,12 @@ def entity_extract():
                     rank_list.append((senti["text"], senti["relevance"], senti["sentiment"]["score"]))
     pickle.dump(rank_list, outfile)
   
-f = open("search.txt")
-outfile = open("result_ranked.txt", "wb")
-getter = f.readlines()
-keyword_extract()
+
+def alchemy_search_function(search_links_list):
+    #f = open("search.txt")
+    #outfile = open("result_ranked.txt", "wb")
+    #getter = f.readlines()
+    return keyword_extract(search_links_list)
+    
+    pass
+

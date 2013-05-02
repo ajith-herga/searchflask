@@ -2,6 +2,9 @@ from flask import render_template, Flask, request
 import arrange_list
 import pickle
 import figure
+import data_builder
+import decode_file
+
 app = Flask(__name__)
 
 external_repo = figure
@@ -19,7 +22,12 @@ def expert_query():
     if request.method == 'POST':
         print request.form
         query = request.form['text']
-        return feedback_page()
+        #Need to call the google's query here so that we get the top results to extract keywords from
+        search_results_links = data_builder.do_google_custom_search_for(query)
+        
+        ranked_keyword_list = decode_file.keyword_extract(search_results_links)
+        
+        return feedback_page(ranked_keyword_list)
 
 
 @app.route('/feedbackentered/', methods=['POST'])
@@ -64,8 +72,9 @@ def gather_syn():
         return render_template('request_expert.html', header = 'Give Expert Advice')
 
 @app.route('/feedback/')
-def feedback_page():
-    buf = test_url.content_for_feedback_page()
+def feedback_page(ranked_keyword_list):
+    #buf = test_url.content_for_feedback_page()
+    buf = ranked_keyword_list
     return render_template('request_keyword.html', data_list = buf, header = "Pick Keywords");
 
 @app.route('/synonym/')
@@ -73,13 +82,41 @@ def synonym_page():
     buf = test_url.content_for_feedback_page()
     return render_template('fill_expert.html', data_list = buf, header = "Pick Synonym");
 
+@app.route('/show_feedback/')
+def show_gathered_feedback():
+    global data
+    sorted_data = data.items()
+    sorted_data.sort(key=itemgetter(0), reverse=0)
+    return render_template('print_database.html', data_list = sorted_data, tab_head = "Database", head_block = "Feedback" )
+
+@app.route('/show_synonyms/')
+def show_synonyms():
+    global synonyms
+    sorted_data = synonyms.items()
+    sorted_data.sort(key=itemgetter(0), reverse=0)
+    return render_template('print_database.html', data_list = sorted_data, tab_head = "Database",  head_block = "Synonyms")
+
+@app.route('/flush_feedback/')
+def flush_feedback():
+    #TODO
+
+    return render_template('welcome.html', info = "Flush feedback done")
+
+@app.route('/flush_synonyns/')
+def flush_synonyms():
+    #TODO
+
+    return render_template('welcome.html', info = "Flush synonyms done")
+
 if __name__ == '__main__':
     global data
     global outfile
-    infile = open("feedback_sorted.txt", "rb")
+    global query
+    #infile = open("feedback_sorted.txt", "rb")
     data = {}
-    infile.close()
-    outfile = open("feedback_sorted.txt", "wba", 0)
+    query = ""
+    #infile.close()
+    #outfile = open("feedback_sorted.txt", "wba", 0)
     app.run(port=5003,debug=True)
     pass
 

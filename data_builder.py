@@ -6,12 +6,21 @@ import nltk
 baseUrl = "http://access.alchemyapi.com/calls/url/URLGetRankedKeywords?"
 queryStringEnd = "&apikey=100e31514a617a41b95c792e60f097b80b2dcc2f&outputMode=json"
 GoogleStringOrig = "https://www.googleapis.com/customsearch/v1?key=AIzaSyD-GRHebffj4YspNUw6Bqfnc1pK8O8xWuc&cx=013036536707430787589:_pqjad5hr1a&q="
+
 attr_list = []
 requirements = []
 search_list = []
 
-query_str_final = GoogleStringOrig + "phone%20display%20technology"
-a = urllib2.urlopen(query_str_final)
-b = json.load(a)
-for items in b["items"]:
-    print items["link"]
+
+def do_google_custom_search_for(query_str):
+	
+	#This does the query search assuming that this is in the phone domain.
+
+	google_query_URL = GoogleStringOrig + "phone%20" + query_str + "%20technology"
+	a = urllib2.urlopen(google_query_URL)
+	b = json.load(a)
+	for items in b["items"]:
+	    search_list.append(items["link"])
+	    print items["link"]
+
+	return search_list  

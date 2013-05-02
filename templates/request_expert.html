@@ -6,7 +6,15 @@
            <h2>{{header}}</h2>
             <input type="text" name="text" value=""><b>Search</b><br><br>
         </div>
+        <div>
             <input type="submit" value="Search">
         </div>
+        <div>
+    		<a href="{{ url_for('show_gathered_feedback') }}">show gathered feedback</a>
+    		<a href="{{ url_for('flush_feedback') }}">flush feedback</a>
+    		<a href="{{ url_for('show_synonyms')}}">show synonyms</a>
+    		<a href="{{ url_for('flush_synonyms') }}">flush synonyms</a>
+		</div>
+
     </form>
 </div>
