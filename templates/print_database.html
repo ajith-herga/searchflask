@@ -1,0 +1,17 @@
+<!doctype html>
+<title> {{tab_head}} </title>
+ <div>
+    <a href="{{ url_for('index') }}">Home</a>
+</div>
+<div> 
+        <div id = "Well" style="width=500px">
+          <h2> {{head_block}} </h2>
+          <input type="submit" value="Done">
+        </div>
+    <ul>
+        {% for key,value in data_list%}
+            <li><b>key</b> value</li>
+            <br>
+        {% endfor %}
+    </ul>
+</div>
