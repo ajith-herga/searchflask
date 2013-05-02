@@ -1,9 +1,11 @@
 from flask import render_template, Flask, request
+from operator import itemgetter
 import arrange_list
 import pickle
 import figure
 import data_builder
 import decode_file
+import os
 
 app = Flask(__name__)
 
@@ -102,11 +104,23 @@ def flush_feedback():
 
     return render_template('welcome.html', info = "Flush feedback done")
 
+def read_latest_synonyms():
+    #TODO
+
+    pass
+
+def read_latest_feedback():
+    #TODO
+
+    pass
+
+
 @app.route('/flush_synonyns/')
 def flush_synonyms():
     #TODO
 
     return render_template('welcome.html', info = "Flush synonyms done")
+
 
 if __name__ == '__main__':
     global data
