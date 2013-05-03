@@ -4,10 +4,14 @@
     <form action="{{ url_for('expert_query') }}" method=post>
         <div>
            <h2>{{header}}</h2>
-            <input type="text" name="text" value=""><b>Search</b><br><br>
+            <b>Search</b><input type="text" name="text" value=""><br><br>
         </div>
         <div>
-            <input type="submit" value="Search">
+            <input type="submit" value="Submit"><br><br>
+        </div>
+        <div>
+            <input type="radio" name="category" value="feedback" checked="checked"><b>Feedback</b>
+            <input type="radio" name="category" value="synonyms"><b>Synonyms</b><br><br>
         </div>
         <div>
     		<a href="{{ url_for('show_gathered_feedback') }}">show gathered feedback</a>

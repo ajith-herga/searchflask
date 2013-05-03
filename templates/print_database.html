@@ -8,8 +8,8 @@
           <h2> {{head_block}} </h2>
         </div>
     <ul>
-        {% for key,value in data_list%}
-            <li><b>key</b> value</li>
+        {% for key,value in data_list %}
+            <li><b>{{ key }}</b> {{ value }} </li>
             <br>
         {% endfor %}
     </ul>
