@@ -3,10 +3,12 @@ import urllib2, json, pprint
 import url_builder
 import product_search
 import init_url
+import user_search_backend
+
 app = Flask(__name__)
 
 
-test_url = product_search
+test_url = user_search_backend
 json_response = ""
 
 

@@ -35,3 +35,5 @@ def are_synonyms(a, b):
     return a in synonym.get(b,[]) \
                or b in synonym.get(a,[]) \
                or any(a in words and b in words for words in synonym.values())
+
+
