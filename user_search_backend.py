@@ -56,7 +56,7 @@ def read_latest_feedback():
     for filename in latest_feedback_files:
         try:
             data = file_getter.read_from_file_and_populate_data(filename)
-            #print data
+            print data
             break
         except Exception, e:
             continue
@@ -121,7 +121,7 @@ def search_text(query_text):
                             del temp_data[attr]
                             temp_data[key] = data[key]
                             
-
+            
     wrapper_links(temp_data)
 
     disp_res = 0

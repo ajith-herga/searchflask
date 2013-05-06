@@ -15,7 +15,7 @@ def do_google_custom_search_for(query_str):
 	search_list = []	
 	#This does the query search assuming that this is in the phone domain.
 
-	google_query_URL = GoogleStringOrig + "phone%20" + query_str + "%20technology"
+	google_query_URL = GoogleStringOrig + "mobile%20phone%20" + query_str + "%20technology%20standards"
 	a = urllib2.urlopen(google_query_URL)
 	b = json.load(a)
 	for items in b["items"]:

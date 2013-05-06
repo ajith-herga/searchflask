@@ -35,6 +35,7 @@ def expert_query():
     if request.method == 'POST':
         print request.form
         query = request.form['text']
+        print "query", query
         #Need to call the google's query here so that we get the top results to extract keywords from
         
         category_button = request.form['category']
@@ -42,12 +43,14 @@ def expert_query():
 
         if category_button == 'feedback':
             search_results_links = data_builder.do_google_custom_search_for(query)
-        
+            print "search_results_links", search_results_links
+            synonyms[query] = [query]
             ranked_keyword_list = decode_file.keyword_extract(search_results_links)
             
             return feedback_page(ranked_keyword_list)
         else:
             print 'Category is synonyms'
+            synonyms[query] = [query]
             ranked_keyword_list = syn_build.do_syn_search_for(query)
             print ranked_keyword_list
             return synonym_page(ranked_keyword_list)

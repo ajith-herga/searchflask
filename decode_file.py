@@ -15,13 +15,21 @@ rank_list = []
 
 
 def keyword_extract(search_links_list):
+    global rank_list
+
+    rank_list = []
+
     for get in search_links_list:
         query_alch_final = baseUrlKey + "&url=" + get.strip() + queryStringEnd
         a = urllib2.urlopen(query_alch_final)
         b = json.load(a)
         for senti in b["keywords"]:
-            if senti["sentiment"]["type"] == "positive":
+            if senti["sentiment"]["type"] == "neutral":
+                rank_list.append((senti["text"], senti["relevance"], 0))
+            else:
                 rank_list.append((senti["text"], senti["relevance"], senti["sentiment"]["score"]))
+
+               
     #pickle.dump(rank_list, outfile)
 
     buf = []
