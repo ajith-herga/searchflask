@@ -6,7 +6,7 @@ import init_url
 import user_search_backend
 
 app = Flask(__name__)
-
+enteredQuery = ""
 
 test_url = user_search_backend
 json_response = ""
@@ -19,8 +19,10 @@ def index():
 
 @app.route('/results/', methods=['POST'])
 def show_results():
+    global enteredQuery
+
     url_builder.data['searchString'] = ""
-    print request
+    #print request
     if request.method == 'POST':
         enteredQuery = request.form['text']
         if enteredQuery == "":
@@ -32,13 +34,16 @@ def show_results():
 
 @app.route('/next/')
 def next_page():
-    buf = test_url.content_for_next_page()
-    return render_template('results.html', content_page = buf)
+    global enteredQuery
+    (buf, start, end) = test_url.content_for_next_page()
+    return render_template('results.html', content_page = buf, start = start , end = end, query = enteredQuery)
  
 @app.route('/previous/')
 def previous_page():
-    buf = test_url.content_for_prev_page()
-    return render_template('results.html', content_page = buf)
+    global enteredQuery
+    (buf, start, end) = test_url.content_for_prev_page()
+    return render_template('results.html', content_page = buf, start = start, end = end, query = enteredQuery)
+
 if __name__ == '__main__':
     test_url.init_data_on_call();
     app.run(debug=True, port=5001)

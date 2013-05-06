@@ -1,18 +1,28 @@
 {% extends "template2.html" %}
 {% block content %}
     <div class = "jumbo">
-        <h2>Welcome to Flask</h2>
+        <h2>Product Search Results</h2>
         </br>
+        <div>
+            <h4>
+                Results: 
+                <ul>
+                    For Query : {{ query }}
+                </ul>
+                <ul>
+                    From: {{ start }} To: {{ end }}
+                </ul> 
+            </h4>                
+        </div>
         <ul>
             {% for caption, href in content_page%}
-                {% if href == "previous.html"%}
+                {% if href == "previous"%}
                     <li><a href="{{ url_for('next_page') }}">{{ caption }}</a></li>
-                {% endif %}
-                {% if href == "next.html"%}
+                {% elif href == "next"%}
                     <li><a href="{{ url_for('previous_page') }}">{{ caption }}</a></li>
-                {% endif %} 
-
-                <li><a href="{{ href }}">{{ caption }}</a></li>
+                {% else %} 
+                    <li><a href="{{ href }}" target="_blank">{{ caption }}</a></li>
+                {% endif %}
             {% endfor %}
         </ul>
     </div>

@@ -29,7 +29,7 @@ def do_google_product_search_for(query_str):
 	google_product_query_URL = queryStringOrig + query_str
 	a = urllib2.urlopen(google_product_query_URL)
 	b = json.load(a)
-	print b
+	#print b
 	if b["totalItems"] == 0:
 		return []
 		

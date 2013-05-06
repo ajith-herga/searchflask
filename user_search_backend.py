@@ -15,7 +15,8 @@ def check(feat, query, feat_dict):
     global query_list
 
     if (feat == ""):
-        query_list.append(query)    
+        query_list.append(query)
+        print query
         return
     
     last_elemen = (feat == list_dict[last_ind])
@@ -32,10 +33,12 @@ def wrapper_links(feat_dict):
     global list_dict
     global last_ind
     global term
+    global query_list
 
     list_dict = [term for term in feat_dict]
     last_ind = len(list_dict) - 1
     term = []
+    query_list = []
     check(list_dict[0], '', feat_dict)
 
     
@@ -53,7 +56,7 @@ def read_latest_feedback():
     for filename in latest_feedback_files:
         try:
             data = file_getter.read_from_file_and_populate_data(filename)
-            print data
+            #print data
             break
         except Exception, e:
             continue
@@ -75,10 +78,10 @@ def read_latest_synonyms():
     for filename in latest_synonym_files:
         try:
             synonyms = file_getter.read_from_file_and_populate_synonyms(filename)
-            print filename
+            #print filename
             break
         except Exception, e:
-            print e
+            #print e
             continue
         finally:
             pass 
@@ -100,23 +103,24 @@ def search_text(query_text):
     tokens = nltk.word_tokenize(query_text)
     pos_tag = nltk.pos_tag(tokens)
     
-    print pos_tag
+    #print pos_tag
     
     for attr,val in pos_tag:
         if val == 'NN' and attr != 'phone':
             
+
+            temp_data[attr] = [attr]
+
             if attr in synonyms.keys():
-                temp_data[attr] = data[attr] 
-            else:
-                temp_data[attr] = [attr]
+                if attr in data:
+                    temp_data[attr] = data[attr] 
+            else:    
                 for key in synonyms.keys():
                     if attr in synonyms[key]:
                         if key in data:
                             del temp_data[attr]
                             temp_data[key] = data[key]
                             
-
-    print temp_data
 
     wrapper_links(temp_data)
 
@@ -125,7 +129,7 @@ def search_text(query_text):
     for query_temp in query_list:
         result_links.extend(data_builder.do_google_product_search_for(query_temp))
 
-    print result_links
+    #print result_links
 
     return 
 
@@ -137,15 +141,24 @@ def content_for_next_page():
 
     if (disp_res + 20 <= len_look):
         buf = result_links[disp_res:disp_res+20]
+        start = disp_res
         disp_res = disp_res + 20
+        end = disp_res
+
     elif (disp_res == len_look):
         buf = []
-        buf.append(('Done', 'previous.html'));
-        return buf
+        buf.append(('Done', 'previous'));
+        start = disp_res
+        end = start
+
     else:
         buf = result_links[disp_res:len_look]
         disp_res = len_look
-    return buf
+        start = disp_res
+        end = len_look
+        pass
+
+    return (buf, start, end)
 
 def content_for_prev_page():
     global result_links
@@ -154,17 +167,23 @@ def content_for_prev_page():
     len_look = len(result_links)
     if disp_res == 0:
         buf = []
-        buf.append(('Done', 'next.html'));
-        return buf
-    if (disp_res - 20 <= 0):
+        buf.append(('Done', 'next'));
+        start = end = len_look
+
+    elif (disp_res - 20 <= 0):
         #First page, should ideally be only = 0
-        buf = result_links[0:disp_res]
+        buf = result_links[0:disp_res]        
+        start = 0
+        end = disp_res
         disp_res = 0
     else:
         # Will never have to display the last page with prev
         disp_res = disp_res - 20
         buf = result_links[disp_res:disp_res + 20]
-    return buf
+        start = disp_res
+        end = disp_res + 20
+
+    return (buf, start, end)
 
 
 def are_synonyms(a, b):
